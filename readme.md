@@ -23,14 +23,17 @@ Our aim is to produce a version of Gemma‑2 9B that:
 2. **Generates** responses that are more truthful and aligned with human preferences, without full‐scale reinforcement learning.  
 3. **Maintains** parameter efficiency and ease of deployment by using LoRA adapters.
 
-## Repository Structure  
--├── notebooks/
--│ └── modeling.ipynb # End-to-end: data formatting → LoRA → DPO → evaluation
--├── requirements.txt # Python dependencies
--├── .env # ACCESS_TOKEN for HuggingFace Hub
--├── README.md # Project overview (this file)
--└── methods.md # Detailed methods & configuration
+## Repository Structure
 
+```text
+.
+├── notebooks/
+│   └── modeling.ipynb       # End‑to‑end: data formatting → LoRA → DPO → evaluation
+├── requirements.txt         # Python dependencies
+├── .env                     # ACCESS_TOKEN for HugingFace Hub
+├── README.md                # Project overview (this file)
+└── methods.md               # Detailed methods & configuration
+```
 
 ## Setup
 
