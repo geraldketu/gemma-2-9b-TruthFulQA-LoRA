@@ -94,10 +94,7 @@ model = get_peft_model(base_model, lora_config)
 ### 4. DPO Implementation
 
 Direct Preference Optimization minimizes the loss  
-\(\displaystyle
-\mathcal{L}_{\mathrm{DPO}}
-= \mathbb{E}_{(x,y^+,y^-)}\bigl(\log\bigl(1 + e^{-\alpha\,(s_{\theta}(x,y^+) - s_{\theta}(x,y^-))}\bigr)\bigr)
-\)
+$\mathcal{L}_{\mathrm{DPO}} = \mathbb{E}_{(x,y^+,y^-)}\bigl[\log\bigl(1 + \exp\bigl(-\alpha\,(s_\theta(x,y^+) - s_\theta(x,y^-))\bigr)\bigr)\bigr]$
 
 where  
 $s_\theta(x,y) = \log p_\theta(y \mid x)$, and $\alpha > 0$ is a temperature hyperparameter.
