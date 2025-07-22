@@ -122,8 +122,8 @@ trainer = DPOTrainer(
 trainer.train()
 ```
 
-- **Batch size/device**$= 2$, accumulation \(= 4 →\) effective batch of \(8\)
-- **Epochs** $ = 1$ for quick alignment on validation data
+- **Batch size/device**$= 2$, accumulation $= 4→$ effective batch of $8$
+- **Epochs** $= 1$ for quick alignment on validation data
 - **Alpha** \(\$alpha =1.0$\) standard scaling for the logistic preference loss
 
 ## 5. Merge & Deployment
