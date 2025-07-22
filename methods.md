@@ -39,9 +39,10 @@ ds = ds.remove_columns(["type", "category", "correct_answers", "source"])
 ```
 ## 2.2 Format for DPO
 
-[For each question \(x\), build pairs \((y^+, y^-)\) where:  
-- \(y^+\) = human‑judged best answer  
-- \(y^-\) = each incorrect alternative  ](https://github.com/geraldketu/gemma-2-9b-TruthFulQA-LoRA/blob/main/methods.md)
+For each question $x$, build pairs $(y^+, y^-)$ where:
+
+- $y^+$ = human‑judged best answer  
+- $y^-$ = each incorrect alternative  
 
 ```python
 def make_pairs(batch):
