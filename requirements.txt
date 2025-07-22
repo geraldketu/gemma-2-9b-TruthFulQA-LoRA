@@ -1,0 +1,6 @@
+ipykernel
+python-dotenv
+datasets
+transformers
+trl
+
