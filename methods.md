@@ -95,13 +95,8 @@ model = get_peft_model(base_model, lora_config)
 
 Direct Preference Optimization minimizes the loss:
 
-\[
-\mathcal{L}_{\mathrm{DPO}}
-= \mathbb{E}_{(x,y^+,y^-)}
-\Bigl[
-  \log\bigl(1 + \exp\bigl(-\alpha\,(s_{\theta}(x,y^+)\;-\;s_{\theta}(x,y^-))\bigr)\bigr)
-\Bigr]
-\]
+$\mathcal{L}_{\mathrm{DPO}}= \mathbb{E}_{(x,y^+,y^-)}\Bigl[  \log\bigl(1 + \exp\bigl(-\alpha\,(s_{\theta}(x,y^+)\;-\;s_{\theta}(x,y^-))\bigr)\bigr) \Bigr]$
+
 
 where
 
