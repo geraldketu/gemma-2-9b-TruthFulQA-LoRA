@@ -3,7 +3,7 @@
 ## Overview  
 This repository demonstrates how to align a large language model’s outputs with human judgments of correctness by combining two techniques:
 
--***Tl;DR*** Here's the [model](https://huggingface.co/GeraldNdawula/gemma-2b-it-lora-dpo-tfQA)
+***TL;DR*** Here's the [model](https://huggingface.co/GeraldNdawula/gemma-2b-it-lora-dpo-tfQA)
 
 - **LoRA (Low‑Rank Adaptation):**  
   A parameter‑efficient fine‑tuning method that inserts small trainable “adapter” matrices into each attention layer. Instead of updating all model weights, LoRA freezes the base model and only learns a low‑rank decomposition. This dramatically reduces memory and compute requirements while retaining the expressivity needed to adapt the model to a new task.
