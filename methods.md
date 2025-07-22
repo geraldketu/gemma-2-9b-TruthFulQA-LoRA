@@ -1,3 +1,4 @@
+
 # Methods & Configuration
 
 This document describes how LoRA and DPO were implemented to fine‑tune Gemma‑2 9B on the TruthfulQA “generation” split, including all formulas in Markdown math syntax.
