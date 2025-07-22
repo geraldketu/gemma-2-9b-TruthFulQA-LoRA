@@ -88,8 +88,8 @@ lora_config = LoraConfig(
 model = get_peft_model(base_model, lora_config)
 ```
 - **Rank** \($r = 8$\) balances expressivity and memory.  
-- **Alpha** \(\$alpha = 16$\) scales the adapter update.  
-- **Dropout** \($= 0.05$\) regularizes adapters.
+- **Alpha** \($\alpha = 16$\) scales the adapter update.  
+- **Dropout** $= 0.05$ regularizes adapters.
 
 ### 4. DPO Implementation
 
