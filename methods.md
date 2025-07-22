@@ -39,10 +39,11 @@ ds = load_dataset("truthfulqa/truthful_qa", "generation", split="validation")
 ds = ds.remove_columns(["type", "category", "correct_answers", "source"])
 ```
 ## 2.2 Format for DPO
-For each question \(x\), build pairs \((y^+, y^-)\) where:
+For each question \($x$\), build pairs \((y^+, y^-)\) where:
 
-- \(y^+\) = human‑judged best answer  
-- \(y^-\) = each incorrect alternative
+- $y^+$ = human‑judged best answer  
+- $y^-$ = each incorrect alternative  
+
 
 
 ```python
