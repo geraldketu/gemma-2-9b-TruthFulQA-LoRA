@@ -65,21 +65,12 @@ train_ds = ds.map(make_pairs, batched=True, remove_columns=ds.column_names)
 
 LoRA injects low‑rank adapters into attention weights, freezing the base model:
 
-- **Original weight matrix:**  
-  $$
-    W_0 \in \mathbb{R}^{d \times k}
-  $$
-- **Adapter update:**  
-  \[
-    \Delta W = A\,B,\quad
-    A \in \mathbb{R}^{d \times r},\;
-    B \in \mathbb{R}^{r \times k},\;
-    r \ll \min(d,k)
-  \]
-- **Effective weight:**  
-  \[
-    W = W_0 + \Delta W
-  \]
+- - **Original weight matrix**:  
+  \($W_0 \in \mathbb{R}^{d \times k}$\)
+- **Adapter update**:  
+  $\Delta W = A\,B,\quad A \in \mathbb{R}^{d \times r},\; B \in \mathbb{R}^{r \times k},\; r \ll \min(d,k)$
+- **Effective weight**:  
+  $W = W_0 + \Delta W$
 
 This reduces trainable parameters from \(d \times k\) to \(r(d + k)\). We used:
 
