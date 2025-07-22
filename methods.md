@@ -97,15 +97,18 @@ Direct Preference Optimization minimizes the loss:
 
 \[
 \mathcal{L}_{\mathrm{DPO}}
-= \mathbb{E}_{(x,y^+,y^-)}\Bigl[\,
-  \log\bigl(1 + \exp\bigl(-\alpha\,\bigl(s_\theta(x,y^+)-s_\theta(x,y^-)\bigr)\bigr)\bigr)
+= \mathbb{E}_{(x,y^+,y^-)}
+\Bigl[
+  \log\bigl(1 + \exp\bigl(-\alpha\,(s_{\theta}(x,y^+)\;-\;s_{\theta}(x,y^-))\bigr)\bigr)
 \Bigr]
 \]
 
-where  
+where
+
 \[
-s_\theta(x,y) = \log p_\theta(y \mid x),
-\quad \alpha > 0 \text{ is a temperature hyperparameter.}
+s_{\theta}(x,y) \;=\;\log p_{\theta}(y \mid x),
+\qquad
+\alpha > 0\;\text{is a temperature hyperparameter.}
 \]
 
 Implement with `sklearn.linear_model.LinearRegression`:
